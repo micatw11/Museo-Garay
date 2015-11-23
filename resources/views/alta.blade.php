@@ -29,7 +29,23 @@
       <label for="">Numero de Documento:</label>
       <input type="number" class="form-control" name="dni" placeholder="Ingrese documento">
     </div>
-					
+        <div class="form-group">
+      <label for="">Cuil:</label>
+      <input type="number" class="form-control" name="cuil" placeholder="Ingrese cuil">
+    </div>
+        <div class="form-group">
+      <label for="">Domicilio:</label>
+      <input type="text" class="form-control" name="domicilio" placeholder="Ingrese domicilio">
+    </div>
+        <div class="form-group">
+      <label for="">Telefono :</label>
+      <input type="number" class="form-control" name="telefono" placeholder="Ingrese numero de telefono (ej. 2804121212)">
+    </div>
+        <div class="form-group">
+      <label for="">Email:</label>
+      <input type="email" class="form-control" name="email" placeholder="Ingrese email (ej. usuario@ejemplo.com)">
+    </div>
+     			
     <input type="submit" value= "Enviar" class="btn btn-default"/>
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
   </form>

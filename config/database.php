@@ -55,7 +55,7 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'personas'),
+            'database'  => env('DB_DATABASE', 'museo'),
             'username'  => env('DB_USERNAME', 'root'),
             'password'  => env('DB_PASSWORD', '1234'),
             'charset'   => 'utf8',

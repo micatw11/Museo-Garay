@@ -20,15 +20,15 @@
      </tr>
      </thead>
      <tbody>
-     @foreach ($clientes as $cliente)
+     @foreach ($personas as $res)
          <tr>
-             <td>{{ $cliente->id }}</td>
-             <td>{{ $cliente->apellido }}</td>
-             <td>{{ $cliente->nombre }}</td>
-             <td>{{ $cliente->dni }}</td>
-             <td><a href="{{url('personas/'.$cliente->apellido)}}" class="btn btn-primary" style="   margin: auto">Read</a></td>
-             <td><a href="{{url('/personas/'.$cliente->apellido)}}" class="btn btn-warning">Update</a></td>
-             <td><a href="{{url('/personas/'.$cliente->id.'/borrar')}}" class="btn btn-danger" style="border-collapse: collapse ">Borrar</a> </td>
+             <td>{{ $res->id }}</td>
+             <td>{{ $res->apellido }}</td>
+             <td>{{ $res->nombre }}</td>
+             <td>{{ $res->dni }}</td>
+             <td><a href="{{url('personas/'.$res->apellido)}}" class="btn btn-primary" style="   margin: auto">Read</a></td>
+             <td><a href="{{url('/personas/editar/'.$res->id)}}" class="btn btn-warning">Update</a></td>
+             <td><a href="{{url('/personas/'.$res->id.'/borrar')}}" class="btn btn-danger" style="border-collapse: collapse ">Borrar</a> </td>
          </tr>
      @endforeach
 

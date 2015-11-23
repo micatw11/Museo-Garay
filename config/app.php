@@ -107,7 +107,8 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
-
+    
+    
     'providers' => [
 
         /*
@@ -136,7 +137,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+      //  'Former\FormerServiceProvider',
         /*
          * Application Service Providers...
          */
@@ -145,7 +146,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        'Illuminate\Html\HtmlServiceProvider',
     ],
+    //'manifest' => storage_path().'/meta',
 
     /*
     |--------------------------------------------------------------------------
@@ -194,7 +197,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-
+        'Form'      => 'Illuminate\Html\FormFacade',
+        'HTML'      => 'Illuminate\Html\HtmlFacade',
+      //  'Former' => 'Former\Facades\Iluminate',
+        
     ],
 
 ];
+
+       

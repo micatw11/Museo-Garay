@@ -23,7 +23,20 @@ Route::get('/alta', function () {
 });
 
 
-Route::get('/personas/{apellido}', 'ClienteController@personas');
-Route::post('/personas/nuevo', 'ClienteController@nuevo');
+Route::get('/personas/{apellido}', 'PersonasController@personas');
+Route::post('/personas/nuevo', 'PersonasController@nuevo');
 
-Route::get('/personas/{id}/borrar', 'ClienteController@borrar');
+Route::get('/personas/{id}/borrar', 'PersonasController@borrar');
+
+Route::get('/actualizar', function () {
+ return view('actualizar');
+});
+
+Route::get('/personas/editar/{id}', 'PersonasController@edit');
+Route::resource('/personas/actualizar/{id}', 'PersonasController@update');
+/*
+Route::post('login', 'WelcomeController@login');
+Route::get('logout', function(){
+    Auth::logout(); // logout user
+    return Redirect::to('/');
+});*/
